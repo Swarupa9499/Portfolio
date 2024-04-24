@@ -1,0 +1,948 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-------------------------------global classes------------------ */
+
+.site-container {
+  max-width: 950px;
+  @apply mx-auto;
+}
+
+.gd-bg-1 {
+  background: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 10%,
+    rgba(112, 9, 121, 0.919) 55%,
+    rgba(0, 185, 255, 1) 90%
+  );
+}
+
+.btn {
+  @apply rounded-full border-2 border-white p-4 my-4 gd-bg-1 font-bold hover:shadow-[1px_1px_21px_rgba(255,255,255)] inline-block w-auto transition ease-in-out;
+}
+
+/* ----------------------------------header css---------------------- */
+
+.logo {
+  @apply xs:w-40 w-52 xs:order-1 lg:order-1 px-4 lg:px-0;
+}
+
+.navigation {
+  @apply xs:order-3  lg:order-2 px-4 lg:px-0;
+}
+
+.toggle-container {
+  @apply border border-white rounded-xl shadow-sm shadow-white xs:order-2  lg:order-3;
+}
+.toggle-btn {
+  @apply text-white p-4;
+}
+
+.toggle-btn-active {
+  @apply text-black p-4 bg-white rounded-r-xl;
+}
+
+/* ----------------------------------home section css---------------------- */
+
+#home {
+  @apply gd-bg-1;
+}
+#home .home-main {
+  @apply flex justify-between align-middle site-container py-20 text-white xs:flex-col-reverse md:flex-row;
+}
+
+#home .social-icons ul {
+  @apply list-none;
+}
+
+#home .social-icons ul li {
+  @apply inline-block;
+}
+
+#home .social-icons ul li img {
+  @apply w-12 mr-2 hover:mx-2 transition-all ease-in duration-75 hover:shadow-lg hover:shadow-pink-700 rounded-full hover:scale-125;
+}
+
+#home .home-section {
+  @apply w-1/2 self-center px-3;
+}
+
+#home .home-section img {
+  @apply w-[85%] rounded-full hover:shadow-[10px_0px_8px_rgba(255,255,255,0.78),-10px_0px_6px_rgba(0,0,0)] transition ease-in-out duration-700 cursor-pointer float-right hover:scale-105 contrast-[120%];
+}
+
+#home .home-text p:first-child {
+  @apply text-white text-2xl font-bold py-2;
+}
+
+#home .home-text h1 {
+  @apply text-white text-4xl font-extrabold gd-bg-1;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.306);
+  text-fill-color: rgba(255, 255, 255, 0.272);
+  background-size: 500% auto;
+  animation: textShine 2s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+    text-shadow: 1px 1px 2px #ffffffbe;
+  }
+}
+#home .home-text p:nth-child(3) {
+  @apply text-white text-xl py-4;
+}
+
+/* --------------------------------about section css------------------------ */
+
+#about {
+  @apply bg-black relative py-20;
+}
+
+#about .about-main {
+  @apply flex justify-around align-middle site-container py-20 sm:px-11 text-white gap-9;
+}
+
+.stars {
+  @apply absolute top-0 left-0 w-full;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ------------------------star css------------------------------ */
+.star {
+  @apply absolute rounded-full pointer-events-none;
+}
+.st1 {
+  @apply left-[5%] top-[5%] w-[2px] h-[2px] bg-white;
+  animation: twinkle-style-1 2s infinite alternate;
+}
+.st2 {
+  @apply left-[6%] top-[50%] w-[2px] h-[2px]   bg-yellow-500;
+  animation: twinkle-style-2 3s infinite alternate;
+}
+.st3 {
+  @apply left-[30%] top-[13%] w-[2px] h-[2px]   bg-yellow-500;
+  animation: twinkle-style-1 2s infinite alternate;
+}
+.st4 {
+  @apply left-[70%] top-[10%] w-[3px] h-[3px]  bg-purple-500;
+  animation: twinkle-style-2 3s infinite alternate;
+}
+.st5 {
+  @apply left-[19%] top-[89%] w-[2px] h-[2px]  bg-blue-500;
+  animation: twinkle-style-1 1s infinite alternate;
+}
+.st6 {
+  @apply left-[8%] top-[77%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 2s infinite alternate;
+}
+.st7 {
+  @apply left-[90%] top-[6%] w-[2px] h-[2px]  bg-pink-500;
+  animation: twinkle-style-1 3s infinite alternate;
+}
+.st8 {
+  @apply left-[80%] top-[5%] w-[2px] h-[2px] bg-purple-500;
+  animation: twinkle-style-2 2s infinite alternate;
+}
+.st9 {
+  @apply left-[16%] top-[36%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-1 1s infinite alternate;
+}
+.st10 {
+  @apply left-[35%] top-[48%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 2s infinite alternate;
+}
+.st11 {
+  @apply left-[70%] top-[70%] w-[2px] h-[2px]  bg-pink-500;
+  animation: twinkle-style-1 1s infinite alternate;
+}
+.st12 {
+  @apply left-[80%] top-[80%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 3s infinite alternate;
+}
+.st13 {
+  @apply left-[95%] top-[50%] w-[2px] h-[2px]  bg-purple-500;
+  animation: twinkle-style-1 2s infinite alternate;
+}
+.st14 {
+  @apply left-[10%] top-[60%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 1s infinite alternate;
+}
+.st15 {
+  @apply left-[2%] top-[70%] w-[2px] h-[2px]  bg-pink-500;
+  animation: twinkle-style-1 2s infinite alternate;
+}
+.st16 {
+  @apply left-[60%] top-[96%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 3s infinite alternate;
+}
+.st17 {
+  @apply left-[30%] top-[86%] w-[2px] h-[2px]  bg-purple-500;
+  animation: twinkle-style-1 3s infinite alternate;
+}
+.st18 {
+  @apply left-[90%] top-[96%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 1s infinite alternate;
+}
+.st19 {
+  @apply left-[46%] top-[89%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-1 2s infinite alternate;
+}
+.st20 {
+  @apply left-[70%] top-[88%] w-[2px] h-[2px]  bg-purple-500;
+  animation: twinkle-style-2 1.5s infinite alternate;
+}
+.st21 {
+  @apply left-[20%] top-[7%] w-[2px] h-[2px]  bg-pink-500;
+  animation: twinkle-style-1 3s infinite alternate;
+}
+.st22 {
+  @apply left-[53%] top-[78%] w-[2px] h-[2px]   bg-yellow-500;
+  animation: twinkle-style-2 1s infinite alternate;
+}
+.st23 {
+  @apply left-[39%] top-[6%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-1 3s infinite alternate;
+}
+.st24 {
+  @apply left-[60%] top-[44%] w-[2px] h-[2px]  bg-purple-500;
+  animation: twinkle-style-2 2s infinite alternate;
+}
+.st25 {
+  @apply left-[71%] top-[48%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-1 2s infinite alternate;
+}
+.st26 {
+  @apply left-[98%] top-[86%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 3s infinite alternate;
+}
+.st27 {
+  @apply left-[96%] top-[18%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-1 2s infinite alternate;
+}
+.st28 {
+  @apply left-[2%] top-[30%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-2 4s infinite alternate;
+}
+.st29 {
+  @apply left-[2%] top-[96%] w-[2px] h-[2px]  bg-yellow-500;
+  animation: twinkle-style-1 3s infinite alternate;
+}
+.st30 {
+  @apply left-[58%] top-[4%] w-[2px] h-[2px]  bg-purple-500;
+  animation: twinkle-style-2 5s infinite alternate;
+}
+.st31 {
+  @apply left-[92%] top-[67%] w-[2px] h-[2px]  bg-white;
+  animation: twinkle-style-1 4s infinite alternate;
+}
+.st32 {
+  @apply left-[88%] top-[20%] w-[2px] h-[2px]  bg-pink-500;
+  animation: twinkle-style-2 3s infinite alternate;
+}
+
+@keyframes twinkle-style-1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0px 0px 10px 1.5px #ffffff;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle-style-2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    box-shadow: 0px 0px 10px 1.5px #ffffff;
+  }
+  80% {
+    opacity: 0;
+  }
+}
+
+#about .about-section-box-1 {
+  @apply w-[30%];
+}
+#about .about-section-box-1 img {
+  @apply rounded-md transition ease-in-out grayscale-[40%] hover:grayscale-0 hover:scale-95 duration-150 ease-linear hover:shadow-[10px_10px_30px_10px_rgba(255,255,255,0.3)];
+}
+#about .about-section-box-2 {
+  @apply w-[70%];
+}
+#about .about-head {
+  @apply text-center  text-white text-3xl font-extrabold pt-3;
+}
+#about .about-text {
+  @apply text-white;
+}
+#about .about-text p:first-child {
+  @apply pb-5;
+}
+#about .read-more {
+  @apply absolute;
+}
+
+/*------------------------skills section start----------------------- */
+
+#skills {
+  @apply bg-[#241247] relative top-0 flex justify-center align-middle h-[740px] m-0;
+}
+#skills h2 {
+  @apply text-center  text-white text-3xl font-extrabold pt-10 mb-4 absolute top-4;
+}
+
+@keyframes growProgressBar {
+  0%,
+  34% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --pgPercentage: var(--value);
+  animation: growProgressBar 5s 1 forwards;
+  animation-iteration-count: infinite;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      #241247 98%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 1px #ffffff67;
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  position: absolute;
+  bottom: -18px;
+  left: 50%; /* Horizontally center */
+  transform: translateX(-50%); /* Center horizontally */
+  font-size: 12px !important;
+  font-weight: bold;
+}
+
+.c1 {
+  --size: 34rem;
+  --fg: rgb(115, 98, 251);
+  --bg: rgb(255, 255, 255);
+}
+
+.c1::before {
+  content: "Creativity-" counter(percentage) "%";
+}
+
+.c2 {
+  --size: 30rem !important;
+  --fg: rgb(92, 152, 177);
+  --bg: #def;
+}
+.c2::before {
+  content: "Team Player-" counter(percentage) "%";
+}
+.c3 {
+  --size: 26rem !important;
+  --fg: rgb(165, 141, 104);
+  --bg: #def;
+}
+.c3::before {
+  content: "Bootstrap-" counter(percentage) "%";
+}
+.c4 {
+  --size: 22rem !important;
+  --fg: rgb(171, 78, 78);
+  --bg: #def;
+}
+.c4::before {
+  content: "jQuery-" counter(percentage) "%";
+}
+.c5 {
+  --size: 18rem !important;
+  --fg: rgb(145, 64, 165);
+  --bg: #def;
+}
+.c5::before {
+  content: "WordPress-" counter(percentage) "%";
+}
+.c6 {
+  --size: 14rem !important;
+  --fg: rgb(52, 146, 163);
+  --bg: #def;
+}
+.c6::before {
+  content: "JavaScript-" counter(percentage) "%";
+}
+.c7 {
+  --size: 11rem !important;
+  --fg: rgb(167, 111, 65);
+  --bg: #def;
+}
+.c7::before {
+  content: "CSS-" counter(percentage) "%";
+}
+.c8 {
+  --size: 8rem !important;
+  --fg: rgb(130, 130, 130);
+  --bg: #def;
+}
+.c8::before {
+  content: "HTML-" counter(percentage) "%";
+}
+
+#skills .mobile-skills {
+  display: none;
+}
+
+#skills .sun {
+  background: linear-gradient(
+    270deg,
+    rgb(255, 1, 1) 10%,
+    rgba(201, 92, 24, 0.919) 55%,
+    rgb(255, 217, 0) 90%
+  );
+  @apply w-[50px] h-[50px] rounded-full absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: sunblink 3s ease-in-out infinite;
+}
+
+@keyframes sunblink {
+  0% {
+    @apply shadow-none;
+  }
+  100% {
+    @apply shadow-[1px_1px_26px_rgba(255,255,255)];
+  }
+}
+
+/*----------------------------------- Certifications Section css--------------------------------------- */
+
+#certifications {
+  @apply py-5;
+  background: radial-gradient(#6012b3f7, #000000);
+}
+#certifications h2 {
+  @apply text-center text-3xl text-white pt-10 font-bold;
+}
+#certifications h3 {
+  @apply text-center text-2xl text-white italic font-bold pb-3;
+}
+
+#certifications .certifications-main {
+  @apply py-14 w-full flex align-middle justify-center relative gap-8 site-container;
+}
+
+.certificate-card {
+  height: 420px;
+  perspective: 1000px;
+  @apply w-2/3;
+}
+
+.certificate-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.certificate-card:hover .certificate-card-inner {
+  transform: rotateY(180deg);
+}
+
+.certificate-card-front,
+.certificate-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.certificate-card-front {
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+.certificate-card-front img {
+  width: 100%;
+  max-height: 100%;
+}
+.certificate-card-back {
+  @apply bg-slate-800 text-white flex justify-center;
+  transform: rotateY(180deg);
+  align-items: center;
+  box-shadow: 1px 1px 19px 2px #875eb0;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.attribute {
+  position: absolute;
+  bottom: 10px;
+}
+
+/*------------------------------- Projects section css------------------- */
+
+#projects {
+  @apply bg-black;
+}
+
+#projects h2 {
+  @apply text-center text-3xl font-bold pt-9 text-white;
+}
+
+#projects .projects-main {
+  @apply site-container;
+}
+
+#projects .projects-main > h3 {
+  clear: both;
+  margin: 0;
+  padding: 4em 1% 0;
+  color: #484b54;
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.projects-main > h3:first-child {
+  padding-top: 0em;
+}
+
+.project-box {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Common style */
+.project-box figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  width: 30%;
+  height: 250px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px 3px #732fdd;
+}
+
+.project-box figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.1;
+  filter: blur(0.9px);
+}
+
+.project-box figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: radial-gradient(#000000b5, #9198e594);
+}
+
+.project-box figure figcaption::before,
+.project-box figure figcaption::after {
+  pointer-events: none;
+}
+
+.project-box figure figcaption,
+.project-box figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-box figure figcaption > a {
+  /* z-index: 100; */
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.project-box figure h3 {
+  font-weight: 800;
+}
+
+.project-box figure h3,
+.project-box figure p {
+  margin: 0;
+}
+
+.project-box figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+figure.project-card {
+  background: #030c17;
+}
+
+figure.project-card img {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.project-card figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale3d(1.4, 1.4, 1);
+  transform: scale3d(1.4, 1.4, 1);
+}
+
+figure.project-card h3 {
+  margin: 20% 0 10px 0;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.project-card p {
+  padding: 1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+figure.project-card:hover h3 {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+figure.project-card:hover figcaption::before,
+figure.project-card:hover p {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+figure.project-card:hover figcaption {
+  background-color: rgba(58, 52, 42, 0);
+}
+
+figure.project-card:hover img {
+  opacity: 0.4;
+  filter: blur(0.1px);
+}
+
+/* Media queries */
+@media screen and (max-width: 50em) {
+  .projects-main {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .project-box figure {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+
+/*---------------------------contact section css-------------------- */
+
+#contact {
+  background: url("/images/contact-bg-2.jpg") no-repeat center center;
+  background-size: cover;
+  height: 570px;
+  width: 100%;
+}
+
+#contact h2 {
+  @apply text-center text-white text-3xl font-bold;
+}
+
+.overlay-contact {
+  background: #00000041;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-container {
+  @apply w-[50%] h-full mx-auto flex justify-center items-center;
+}
+.contact-box {
+  @apply w-full;
+}
+
+.contact-container form {
+  @apply w-full;
+}
+.contact-container form label {
+  @apply text-white block;
+}
+
+#contact input,
+textarea {
+  @apply w-full rounded-sm my-2 p-1;
+  background-color: #f1f1f11c;
+  color: white;
+  border: 1px solid #8146c0;
+  box-shadow: 0 0 10px 4px #ffffff;
+}
+#contact input:focus,
+textarea:focus {
+  box-shadow: 0 0 10px 4px #aa54d2;
+  background-color: #0000005e;
+}
+
+#contact .submitBtn {
+  @apply bg-transparent text-white font-bold shadow-none transition cursor-pointer border border-purple-600 border-[1.5px] hover:shadow-[1px_1px_10px_rgba(255,255,255)];
+}
+
+/* ------------------------footer css---------------------------- */
+
+footer {
+  @apply bg-zinc-900 text-white text-center py-6;
+}
+
+footer i {
+  @apply border rounded-full border-white p-2 mx-2 inline-block shadow-lg hover:shadow-pink-700;
+}
+
+/* -----------------------back to top button css-----------------*/
+.back-to-top{
+  @apply fixed bottom-4 right-6 bg-black text-white rounded-full w-14 h-14 text-center flex justify-center items-center shadow-[1px_1px_10px_rgba(255,255,255)] transition ease-in-out;
+}
+
+.back-to-top a{
+  @apply block w-full;
+}
+
+.back-to-top i{
+  @apply text-2xl;
+}
+
+/* ============================= medium devices css========================================= */
+
+@media screen and (max-width: 992px) {
+  /* home section medium device css */
+  #home .home-main {
+    padding: 50px 35px;
+  }
+  #home .home-section {
+    width: 90%;
+  }
+  #home .home-section img {
+    float: none;
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  /* certification section medium device css */
+  #certifications {
+    padding: 70px 35px;
+  }
+
+  #certifications h2 {
+    padding-top: 20px;
+  }
+
+  .certificate-card {
+    height: 22rem;
+  }
+
+  .certificate-card-front,
+  .certificate-card-back {
+    width: 100%;
+    height: 100%;
+  }
+
+  #certifications h3 {
+    font-size: 14px;
+  }
+  #certifications p {
+    font-size: 10px;
+  }
+
+  #certifications .btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  /* projects medium device css */
+  #projects {
+    padding: 50px 0;
+  }
+
+  .project-box figure {
+    width: 41%;
+  }
+
+  /* skills css medium devices */
+  #skills {
+    height: 834px;
+  }
+  #skills h2 {
+    padding-top: 4rem;
+  }
+
+  /* back to top medium css */
+    .back-to-top{
+      @apply bottom-4 right-0 left-6 ;
+    }
+} /* media 992 end */
+
+@media screen and (max-width: 880px) {
+  #certifications .certifications-main {
+    gap: 0.6rem;
+  }
+  .certificate-card {
+    height: 19rem;
+  }
+}
+
+/* ============================= mobile devices css========================================= */
+
+@media screen and (max-width: 590px) {
+  /* home mobile css */
+  #home .home-section {
+    width: 93%;
+  }
+
+  #home .home-section img {
+    float: none;
+  }
+
+  #home {
+    text-align: center;
+  }
+  /* about */
+  #about .about-main {
+    flex-direction: column;
+  }
+
+  #about .about-section-box-1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #about .about-section-box-2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* skills mobile css */
+  #skills {
+    height: 500px;
+  }
+  #skills .mobile-skills {
+    display: block;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  div[role="progressbar"] {
+    display: none;
+  }
+
+  /* certifications mobile css */
+  #certifications .certifications-main {
+    flex-direction: column;
+  }
+  #certifications .certificate-card {
+    height: 18rem !important;
+    width: 74%;
+    margin: 0 auto;
+  }
+  #certifications .certifications-main {
+    gap: 1rem;
+  }
+
+  /* project mobile css */
+  #projects .project-box {
+    flex-direction: column;
+  }
+  .project-box figure {
+    width: 82%;
+  }
+
+  /* contact mobile css */
+
+  #contact {
+    height: 574px;
+  }
+
+  #contact .contact-container {
+    width: 80%;
+  }
+}
+/* mobile css end */
